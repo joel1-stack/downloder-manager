@@ -9,49 +9,49 @@
 :root{--bg:#0a0a0f;--card:#12121a;--border:#1e1e2e;--text:#e0e0e0;--text2:#777;--accent:#00d4ff;--green:#00e676;--yellow:#ffd740;--red:#ff5252;--orange:#ff9100}
 body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
 .wrap{max-width:960px;margin:0 auto;padding:20px}
-header{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--border);margin-bottom:20px}
+header{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--border);margin-bottom:20px;flex-wrap:wrap;gap:10px}
 header h1{font-size:20px;font-weight:700;color:var(--accent)}
-.stats{display:flex;gap:12px}
-.stat{text-align:center;padding:6px 12px;background:var(--card);border:1px solid var(--border);border-radius:8px;min-width:60px}
+.stats{display:flex;gap:12px;flex-wrap:wrap}
+.stat{text-align:center;padding:6px 12px;background:var(--card);border:1px solid var(--border);border-radius:8px;min-width:56px}
 .stat .n{font-size:18px;font-weight:700;color:var(--accent)}
-.stat .l{font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:1px;margin-top:2px}
-
-.bar{display:flex;gap:8px;margin-bottom:16px}
-.bar input[type=text]{flex:1;padding:11px 14px;background:var(--card);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:13px;outline:none}
+.stat .l{font-size:9px;color:var(--text2);text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+.sys-info{display:flex;gap:16px;margin-bottom:14px;padding:8px 14px;background:var(--card);border:1px solid var(--border);border-radius:8px;font-size:11px;color:var(--text2);flex-wrap:wrap}
+.sys-info span{color:var(--accent)}
+.bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.bar input[type=text]{flex:1;min-width:200px;padding:11px 14px;background:var(--card);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:13px;outline:none}
 .bar input:focus{border-color:var(--accent)}
 .bar button{padding:11px 20px;background:var(--accent);color:#000;border:none;border-radius:8px;font-weight:700;font-size:13px;cursor:pointer}
 .bar button:hover{opacity:.85}
-
-.flt{display:flex;gap:6px;margin-bottom:14px}
+.cfg{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;align-items:center}
+.cfg label{font-size:11px;color:var(--text2)}
+.cfg input{width:80px;padding:5px 8px;background:var(--card);border:1px solid var(--border);border-radius:5px;color:var(--text);font-size:11px;outline:none}
+.cfg button{padding:5px 10px;background:var(--card);border:1px solid var(--border);color:var(--text);border-radius:5px;font-size:11px;cursor:pointer}
+.cfg button:hover{border-color:var(--accent);color:var(--accent)}
+.flt{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
 .flt button{padding:5px 12px;background:var(--card);border:1px solid var(--border);border-radius:5px;color:var(--text2);font-size:11px;cursor:pointer}
 .flt button.on{border-color:var(--accent);color:var(--accent)}
-
 .list{display:flex;flex-direction:column;gap:6px}
 .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 16px}
 .card:hover{border-color:#333}
-.hdr{display:flex;justify-content:space-between;align-items:center}
+.hdr{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
 .hdr .name{font-weight:600;font-size:14px}
-.hdr .url{font-size:11px;color:var(--text2);margin-top:2px;word-break:break-all}
-.badge{font-size:11px;font-weight:600;padding:2px 8px;border-radius:12px;text-transform:uppercase}
+.hdr .url{font-size:10px;color:var(--text2);margin-top:2px;word-break:break-all;max-width:500px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.badge{font-size:10px;font-weight:600;padding:2px 8px;border-radius:12px;text-transform:uppercase;white-space:nowrap}
 .b-DOWNLOADING{background:rgba(0,230,118,.15);color:var(--green)}
 .b-PAUSED{background:rgba(255,215,64,.15);color:var(--yellow)}
 .b-COMPLETED{background:rgba(0,212,255,.15);color:var(--accent)}
 .b-FAILED{background:rgba(255,82,82,.15);color:var(--red)}
 .b-CANCELLED,.b-IDLE{background:rgba(120,120,120,.15);color:var(--text2)}
 .b-QUEUED,.b-STARTING{background:rgba(255,145,0,.15);color:var(--orange)}
-
 .pbar{height:5px;background:#1a1a2e;border-radius:3px;margin:8px 0 4px;overflow:hidden}
 .pfill{height:100%;border-radius:3px;transition:width .4s;background:linear-gradient(90deg,var(--accent),var(--green))}
 .pmeta{display:flex;justify-content:space-between;font-size:11px;color:var(--text2)}
-
-.btns{display:flex;gap:5px;margin-top:8px}
+.btns{display:flex;gap:5px;margin-top:8px;flex-wrap:wrap}
 .btns button{padding:4px 12px;border:1px solid var(--border);background:transparent;color:var(--text);border-radius:5px;font-size:11px;cursor:pointer}
 .btns button:hover{border-color:var(--accent);color:var(--accent)}
 .btns .bp{border-color:var(--yellow);color:var(--yellow)}.btns .bp:hover{background:rgba(255,215,64,.1)}
 .btns .br{border-color:var(--green);color:var(--green)}.btns .br:hover{background:rgba(0,230,118,.1)}
 .btns .bc{border-color:var(--red);color:var(--red)}.btns .bc:hover{background:rgba(255,82,82,.1)}
-.btns .bd{border-color:var(--red);color:var(--red)}.btns .bd:hover{background:rgba(255,82,82,.1)}
-
 .empty{text-align:center;padding:50px 0;color:var(--text2)}
 .empty h3{color:var(--text);margin-bottom:6px}
 .toast{position:fixed;bottom:20px;right:20px;background:var(--card);border:1px solid var(--accent);padding:10px 18px;border-radius:8px;font-size:12px;color:var(--accent);z-index:999;animation:si .3s}
@@ -66,10 +66,27 @@ header h1{font-size:20px;font-weight:700;color:var(--accent)}
     <div class="stats">
       <div class="stat"><div class="n" id="sa">0</div><div class="l">Active</div></div>
       <div class="stat"><div class="n" id="sp">0</div><div class="l">Paused</div></div>
-      <div class="stat"><div class="n" id="sc">0</div><div class="l">Done</div></div>
+      <div class="stat"><div class="n" id="sd">0</div><div class="l">Done</div></div>
+      <div class="stat"><div class="n" id="sf">0</div><div class="l">Failed</div></div>
       <div class="stat"><div class="n" id="st">0</div><div class="l">Total</div></div>
     </div>
   </header>
+
+  <div class="sys-info" id="sysinfo">
+    <div>Speed: <span id="sys-speed">0 B/s</span></div>
+    <div>Queue: <span id="sys-queue">0</span></div>
+    <div>Concurrent: <span id="sys-conc">4</span></div>
+    <div>BW Limit: <span id="sys-bw">Unlimited</span></div>
+  </div>
+
+  <div class="cfg">
+    <label>BW Limit (MB/s):</label>
+    <input type="number" id="bw-input" value="0" min="0" placeholder="0=unlimited">
+    <button onclick="setBW()">Set</button>
+    <label style="margin-left:12px">Max Concurrent:</label>
+    <input type="number" id="conc-input" value="4" min="1" max="16">
+    <button onclick="setConc()">Set</button>
+  </div>
 
   <div class="bar">
     <input type="text" id="url" placeholder="Paste URL and press Enter...">
@@ -78,12 +95,12 @@ header h1{font-size:20px;font-weight:700;color:var(--accent)}
   </div>
 
   <div class="flt">
-    <button class="on" data-f="all" onclick="setF('all',this)">All</button>
-    <button data-f="DOWNLOADING" onclick="setF('DOWNLOADING',this)">Active</button>
-    <button data-f="PAUSED" onclick="setF('PAUSED',this)">Paused</button>
-    <button data-f="COMPLETED" onclick="setF('COMPLETED',this)">Done</button>
-    <button data-f="FAILED" onclick="setF('FAILED',this)">Failed</button>
-    <button data-f="CANCELLED" onclick="setF('CANCELLED',this)">Cancelled</button>
+    <button class="on" onclick="setF('all',this)">All</button>
+    <button onclick="setF('DOWNLOADING',this)">Active</button>
+    <button onclick="setF('PAUSED',this)">Paused</button>
+    <button onclick="setF('COMPLETED',this)">Done</button>
+    <button onclick="setF('FAILED',this)">Failed</button>
+    <button onclick="setF('CANCELLED',this)">Cancelled</button>
   </div>
 
   <div class="list" id="list"></div>
@@ -93,18 +110,27 @@ header h1{font-size:20px;font-weight:700;color:var(--accent)}
 let F='all',D=[];
 
 async function load(){
-  try{D=await(await fetch('/api/downloads')).json();render();stats();}
-  catch(e){console.error(e);}
+  try{
+    const [dlRes,sysRes]=await Promise.all([fetch('/api/downloads'),fetch('/api/system')]);
+    D=await dlRes.json();
+    const sys=await sysRes.json();
+    render();stats();updateSys(sys);
+  }catch(e){console.error(e);}
 }
 
 function stats(){
-  const a=D.filter(d=>d.status==='DOWNLOADING').length;
-  const p=D.filter(d=>d.status==='PAUSED').length;
-  const c=D.filter(d=>d.status==='COMPLETED').length;
-  document.getElementById('sa').textContent=a;
-  document.getElementById('sp').textContent=p;
-  document.getElementById('sc').textContent=c;
+  document.getElementById('sa').textContent=D.filter(d=>d.status==='DOWNLOADING').length;
+  document.getElementById('sp').textContent=D.filter(d=>d.status==='PAUSED').length;
+  document.getElementById('sd').textContent=D.filter(d=>d.status==='COMPLETED').length;
+  document.getElementById('sf').textContent=D.filter(d=>d.status==='FAILED').length;
   document.getElementById('st').textContent=D.length;
+}
+
+function updateSys(sys){
+  document.getElementById('sys-speed').textContent=fmtSpeed(sys.bandwidth.globalSpeed||0);
+  document.getElementById('sys-queue').textContent=sys.scheduler.queuedCount||0;
+  document.getElementById('sys-conc').textContent=sys.scheduler.maxConcurrent||4;
+  document.getElementById('sys-bw').textContent=sys.bandwidth.globalLimit>0?fmtSpeed(sys.bandwidth.globalLimit):'Unlimited';
 }
 
 function render(){
@@ -115,13 +141,22 @@ function render(){
     const p=d.percentage||0;
     const dl=fmt(d.downloaded_bytes||0);
     const tot=fmt(d.total_size||0);
+    const sp=fmtSpeed(d.speed||0);
+    const eta=fmtEta(d.eta||0);
+    const ch=`${d.chunks?.completed||0}/${d.chunks?.total||0}`;
     return`<div class="card">
       <div class="hdr">
-        <div><div class="name">#${d.id} ${esc(d.filename||'unknown')}</div><div class="url">${esc(d.url||'')}</div></div>
+        <div style="min-width:0;flex:1">
+          <div class="name">#${d.id} ${esc(d.filename||'unknown')}</div>
+          <div class="url" title="${esc(d.url||'')}">${esc(d.url||'')}</div>
+        </div>
         <span class="badge b-${d.status}">${d.status}</span>
       </div>
       <div class="pbar"><div class="pfill" style="width:${p}%"></div></div>
-      <div class="pmeta"><span>${dl} / ${tot}</span><span>${p}%</span></div>
+      <div class="pmeta">
+        <span>${dl} / ${tot} | Chunks: ${ch}</span>
+        <span>${p}%${d.status==='DOWNLOADING'?' | '+sp+' | ETA: '+eta:''}</span>
+      </div>
       <div class="btns">${acts(d)}</div>
     </div>`;
   }).join('');
@@ -129,17 +164,16 @@ function render(){
 
 function acts(d){
   let h='';
-  if(d.status==='DOWNLOADING') h=`<button class="bp" onclick="pa(${d.id})">Pause</button><button class="bc" onclick="ca(${d.id})">Cancel</button>`;
-  else if(d.status==='PAUSED'||d.status==='FAILED') h=`<button class="br" onclick="re(${d.id})">Resume</button><button class="bc" onclick="ca(${d.id})">Cancel</button>`;
-  else if(d.status==='QUEUED'||d.status==='IDLE'||d.status==='STARTING') h=`<button class="bc" onclick="ca(${d.id})">Cancel</button>`;
-  else h=`<button class="bd" onclick="rm(${d.id})">Remove</button>`;
+  if(d.status==='DOWNLOADING')h=`<button class="bp" onclick="pa(${d.id})">Pause</button><button class="bc" onclick="ca(${d.id})">Cancel</button>`;
+  else if(d.status==='PAUSED'||d.status==='FAILED')h=`<button class="br" onclick="re(${d.id})">Resume</button><button class="bc" onclick="ca(${d.id})">Cancel</button>`;
+  else if(!['COMPLETED','CANCELLED'].includes(d.status))h=`<button class="bc" onclick="ca(${d.id})">Cancel</button>`;
+  else h=`<button class="bc" onclick="rm(${d.id})">Remove</button>`;
   h+=`<button onclick="ev(${d.id})">Events</button>`;
   return h;
 }
 
 async function addDL(){
-  const u=document.getElementById('url');
-  const f=document.getElementById('fn');
+  const u=document.getElementById('url'),f=document.getElementById('fn');
   const url=u.value.trim();
   if(!url){toast('Enter a URL',1);return;}
   try{
@@ -155,40 +189,33 @@ async function ca(id){await api('/api/downloads/'+id+'/cancel');}
 async function rm(id){await api('/api/downloads/'+id,'DELETE');}
 async function ev(id){
   const r=await(await fetch('/api/downloads/'+id+'/events')).json();
-  console.log('Events for #'+id, r);
-  toast(`Events for #${id}: ${r.length} events (check console)`);
+  toast(`#${id}: ${r.length} events logged`);
+}
+async function setBW(){
+  const v=parseFloat(document.getElementById('bw-input').value)||0;
+  await api('/api/system/bandwidth','POST',{limit:v*1024*1024});
+}
+async function setConc(){
+  const v=parseInt(document.getElementById('conc-input').value)||4;
+  await api('/api/system/concurrent','POST',{max:v});
 }
 
-async function api(url,method='POST'){
-  try{const r=await(await fetch(url,{method})).json();if(r.error)toast(r.error,1);load();}
+async function api(url,method='POST',body=null){
+  try{const opts={method,headers:{'Content-Type':'application/json'}};if(body)opts.body=JSON.stringify(body);
+  const r=await(await fetch(url,opts)).json();if(r.error)toast(r.error,1);load();}
   catch(e){toast('Error: '+e.message,1);}
 }
 
-function setF(f,el){
-  F=f;
-  document.querySelectorAll('.flt button').forEach(b=>b.classList.remove('on'));
-  el.classList.add('on');
-  render();
-}
+function setF(f,el){F=f;document.querySelectorAll('.flt button').forEach(b=>b.classList.remove('on'));el.classList.add('on');render();}
 
-function fmt(b){
-  if(!b||b===0)return'0 B';
-  const u=['B','KB','MB','GB','TB'];
-  const i=Math.floor(Math.log(b)/Math.log(1024));
-  return(b/Math.pow(1024,i)).toFixed(i>0?1:0)+' '+u[i];
-}
+function fmt(b){if(!b||b===0)return'0 B';const u=['B','KB','MB','GB','TB'];const i=Math.floor(Math.log(b)/Math.log(1024));return(b/Math.pow(1024,i)).toFixed(i>0?1:0)+' '+u[i];}
+function fmtSpeed(b){return fmt(b)+'/s';}
+function fmtEta(s){if(!s)return'-';if(s<60)return s+'s';return Math.floor(s/60)+'m '+Math.round(s%60)+'s';}
 function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML;}
-function toast(msg,err){
-  const t=document.createElement('div');
-  t.className='toast'+(err?' err':'');
-  t.textContent=msg;
-  document.body.appendChild(t);
-  setTimeout(()=>t.remove(),3000);
-}
+function toast(msg,err){const t=document.createElement('div');t.className='toast'+(err?' err':'');t.textContent=msg;document.body.appendChild(t);setTimeout(()=>t.remove(),3000);}
 
 document.getElementById('url').addEventListener('keydown',e=>{if(e.key==='Enter')addDL();});
-load();
-setInterval(load,2000);
+load();setInterval(load,2000);
 </script>
 </body>
 </html>
