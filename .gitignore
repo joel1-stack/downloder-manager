@@ -1,0 +1,6 @@
+node_modules/
+downloads/
+download_manager.db
+*.db
+.downloads/
+.env
